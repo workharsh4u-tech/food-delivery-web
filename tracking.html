@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Order | FoodExpress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/tracking.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodExpress</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#restaurants">Restaurants</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Tracking Section -->
+    <section class="tracking-section">
+        <div class="container">
+            <div class="tracking-header">
+                <h1>Track Your Order</h1>
+                <div class="order-id">Order ID: <span id="orderId">Loading...</span></div>
+            </div>
+
+            <div class="tracking-layout">
+                <!-- Order Timeline -->
+                <div class="order-timeline">
+                    <h2>Order Status</h2>
+                    <div class="timeline">
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Order Placed</h3>
+                                <p>Your order has been received</p>
+                                <span class="timestamp" id="time1">Just now</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Restaurant Confirmed</h3>
+                                <p>Restaurant is preparing your food</p>
+                                <span class="timestamp" id="time2">5 mins ago</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item completed">
+                            <div class="timeline-icon">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Food Ready</h3>
+                                <p>Your order is ready for pickup</p>
+                                <span class="timestamp" id="time3">2 mins ago</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item active">
+                            <div class="timeline-icon">
+                                <i class="fas fa-motorcycle"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Out for Delivery</h3>
+                                <p>Your driver is on the way</p>
+                                <span class="timestamp">In progress</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item">
+                            <div class="timeline-icon">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h3>Delivered</h3>
+                                <p>Enjoy your meal!</p>
+                                <span class="timestamp">Estimated in 15 mins</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Live Map -->
+                    <div class="live-map">
+                        <h3>Live Tracking</h3>
+                        <div class="map-container">
+                            <img src="https://images.unsplash.com/photo-1569336415962-a4bd9f69cd83?w=800&h=500&fit=crop" alt="Map" class="map-image">
+                            <div class="map-overlay">
+                                <div class="map-marker restaurant">
+                                    <i class="fas fa-store"></i>
+                                    <span>Restaurant</span>
+                                </div>
+                                <div class="map-marker driver">
+                                    <i class="fas fa-motorcycle"></i>
+                                    <span>Driver</span>
+                                </div>
+                                <div class="map-marker destination">
+                                    <i class="fas fa-home"></i>
+                                    <span>You</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Driver Info -->
+                    <div class="driver-info">
+                        <h3>Your Delivery Driver</h3>
+                        <div class="driver-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Driver" class="driver-photo">
+                            <div class="driver-details">
+                                <h4>Michael Anderson</h4>
+                                <div class="driver-rating">
+                                    <i class="fas fa-star"></i>
+                                    <span>4.9 (500+ deliveries)</span>
+                                </div>
+                                <p class="driver-vehicle">Honda CRF 250 • ABC 1234</p>
+                            </div>
+                            <div class="driver-actions">
+                                <button class="btn-icon-action">
+                                    <i class="fas fa-phone"></i>
+                                </button>
+                                <button class="btn-icon-action">
+                                    <i class="fas fa-comment"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Details -->
+                <div class="order-details-section">
+                    <!-- Order Items -->
+                    <div class="details-card">
+                        <h2>Order Details</h2>
+                        <div id="orderItemsList"></div>
+                        <div class="order-summary-mini">
+                            <div class="summary-row">
+                                <span>Subtotal</span>
+                                <span id="summarySubtotal">$0.00</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Delivery Fee</span>
+                                <span id="summaryDelivery">$3.99</span>
+                            </div>
+                            <div class="summary-row">
+                                <span>Tax</span>
+                                <span id="summaryTax">$0.00</span>
+                            </div>
+                            <div class="summary-divider"></div>
+                            <div class="summary-row total">
+                                <span>Total</span>
+                                <span id="summaryTotal">$0.00</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delivery Address -->
+                    <div class="details-card">
+                        <h2><i class="fas fa-map-marker-alt"></i> Delivery Address</h2>
+                        <div id="deliveryAddress">
+                            <p><strong id="customerName"></strong></p>
+                            <p id="customerPhone"></p>
+                            <p id="customerAddress"></p>
+                        </div>
+                    </div>
+
+                    <!-- Help Section -->
+                    <div class="details-card help-section">
+                        <h2><i class="fas fa-question-circle"></i> Need Help?</h2>
+                        <button class="help-btn">
+                            <i class="fas fa-headset"></i>
+                            <span>Contact Support</span>
+                        </button>
+                        <button class="help-btn">
+                            <i class="fas fa-times-circle"></i>
+                            <span>Cancel Order</span>
+                        </button>
+                        <button class="help-btn">
+                            <i class="fas fa-exclamation-triangle"></i>
+                            <span>Report an Issue</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 FoodExpress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/tracking.js"></script>
+</body>
+</html>

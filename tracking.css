@@ -1,0 +1,420 @@
+/* Tracking Page Styles */
+
+.tracking-section {
+    padding: 60px 0;
+    background: var(--light-color);
+    min-height: calc(100vh - 200px);
+}
+
+.tracking-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.tracking-header h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--dark-color);
+}
+
+.order-id {
+    font-size: 18px;
+    color: #666;
+}
+
+.order-id span {
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.tracking-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+/* Order Timeline */
+.order-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.order-timeline > h2,
+.details-card h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.details-card h2 i {
+    color: var(--primary-color);
+}
+
+.timeline {
+    background: #fff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 40px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 22px;
+    top: 50px;
+    width: 2px;
+    height: calc(100% - 30px);
+    background: #e0e0e0;
+}
+
+.timeline-item.completed::after {
+    background: var(--success-color);
+}
+
+.timeline-item.active::after {
+    background: linear-gradient(to bottom, var(--success-color), #e0e0e0);
+}
+
+.timeline-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.timeline-item.completed .timeline-icon {
+    background: var(--success-color);
+    color: #fff;
+}
+
+.timeline-item.active .timeline-icon {
+    background: var(--primary-color);
+    color: #fff;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(255, 107, 53, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 15px rgba(255, 107, 53, 0);
+    }
+}
+
+.timeline-content {
+    flex: 1;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: var(--dark-color);
+}
+
+.timeline-content p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.timestamp {
+    font-size: 13px;
+    color: #999;
+    font-weight: 500;
+}
+
+/* Live Map */
+.live-map {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.live-map h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.map-container {
+    position: relative;
+    width: 100%;
+    height: 350px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.map-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.map-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.map-marker {
+    position: absolute;
+    background: #fff;
+    padding: 8px 12px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    animation: markerBounce 2s infinite;
+}
+
+@keyframes markerBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+.map-marker.restaurant {
+    top: 20px;
+    left: 20px;
+    color: var(--primary-color);
+}
+
+.map-marker.driver {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #2196F3;
+    animation: driverMove 3s infinite;
+}
+
+@keyframes driverMove {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-30%, -30%); }
+}
+
+.map-marker.destination {
+    bottom: 20px;
+    right: 20px;
+    color: var(--success-color);
+}
+
+.map-marker i {
+    font-size: 16px;
+}
+
+/* Driver Info */
+.driver-info {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.driver-info h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+}
+
+.driver-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.driver-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+}
+
+.driver-details {
+    flex: 1;
+}
+
+.driver-details h4 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+.driver-rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.driver-rating i {
+    color: #FFD700;
+}
+
+.driver-vehicle {
+    font-size: 13px;
+    color: #999;
+}
+
+.driver-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-icon-action {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: var(--primary-color);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.btn-icon-action:hover {
+    transform: scale(1.1);
+    background: var(--dark-color);
+}
+
+/* Order Details Section */
+.order-details-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+}
+
+.order-summary-mini {
+    margin-top: 20px;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    font-size: 15px;
+    color: #666;
+}
+
+.summary-row.total {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.summary-divider {
+    height: 1px;
+    background: var(--border-color);
+    margin: 15px 0;
+}
+
+#deliveryAddress {
+    color: #666;
+    line-height: 1.8;
+}
+
+#deliveryAddress p {
+    margin-bottom: 8px;
+}
+
+#deliveryAddress strong {
+    color: var(--dark-color);
+}
+
+/* Help Section */
+.help-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.help-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    border: 2px solid var(--border-color);
+    background: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--dark-color);
+}
+
+.help-btn:hover {
+    border-color: var(--primary-color);
+    background: rgba(255, 107, 53, 0.05);
+    transform: translateX(5px);
+}
+
+.help-btn i {
+    color: var(--primary-color);
+    font-size: 20px;
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .tracking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline {
+        padding: 25px;
+    }
+
+    .map-container {
+        height: 250px;
+    }
+
+    .driver-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .driver-actions {
+        width: 100%;
+        justify-content: center;
+    }
+}

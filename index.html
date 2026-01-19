@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodExpress - Delicious Food Delivered Fast</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="js/main.js"></script>
+    <script src="main.js"></script>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodExpress</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="#restaurants">Restaurants</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#how-it-works">How it Works</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-icon" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="btn btn-primary">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600&h=900&fit=crop" alt="Delicious food background">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Delicious Food <br>
+                    <span class="gradient-text">Delivered to Your Door</span>
+                </h1>
+                <p class="hero-subtitle">Order from your favorite restaurants and get fresh, hot food delivered in minutes</p>
+                
+                <div class="search-box">
+                    <div class="search-input-group">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" placeholder="Enter your delivery address" id="locationInput">
+                    </div>
+                    <div class="search-divider"></div>
+                    <div class="search-input-group">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for food or restaurants" id="searchInput">
+                    </div>
+                    <button class="btn btn-search">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <i class="fas fa-store"></i>
+                        <div>
+                            <h3>500+</h3>
+                            <p>Restaurants</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-users"></i>
+                        <div>
+                            <h3>50K+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h3>30 Min</h3>
+                            <p>Avg Delivery Time</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+        <div class="container">
+            <div class="promo-content">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=400&fit=crop" alt="Special Offer" class="promo-image">
+                <div class="promo-text">
+                    <span class="promo-badge">Limited Time Offer</span>
+                    <h2>Get 50% OFF on your first order!</h2>
+                    <p>Use code: <strong>FIRST50</strong> at checkout</p>
+                    <button class="btn btn-primary">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Food Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Categories</h2>
+                <p>Browse by your favorite cuisine type</p>
+            </div>
+            
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Burgers">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-hamburger"></i>
+                        <h3>Burgers</h3>
+                        <p>145 restaurants</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="Pizza">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-pizza-slice"></i>
+                        <h3>Pizza</h3>
+                        <p>98 restaurants</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop" alt="Sushi">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-fish"></i>
+                        <h3>Sushi</h3>
+                        <p>67 restaurants</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1599974579688-8dbdd335c77f?w=400&h=300&fit=crop" alt="Tacos">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-pepper-hot"></i>
+                        <h3>Mexican</h3>
+                        <p>112 restaurants</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1626074353765-517a681e40be?w=400&h=300&fit=crop" alt="Pasta">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-cookie"></i>
+                        <h3>Italian</h3>
+                        <p>89 restaurants</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1585937421612-70a008356fbe?w=400&h=300&fit=crop" alt="Desserts">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-ice-cream"></i>
+                        <h3>Desserts</h3>
+                        <p>134 restaurants</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1596797038530-2c107229654b?w=400&h=300&fit=crop" alt="Indian">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-pepper-hot"></i>
+                        <h3>Indian</h3>
+                        <p>76 restaurants</p>
+                    </div>
+                </div>
+
+                <div class="category-card">
+                    <div class="category-image">
+                        <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e?w=400&h=300&fit=crop" alt="Thai">
+                    </div>
+                    <div class="category-info">
+                        <i class="fas fa-bowl-rice"></i>
+                        <h3>Thai</h3>
+                        <p>52 restaurants</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Restaurants -->
+    <section class="restaurants" id="restaurants">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Restaurants</h2>
+                <p>Top-rated restaurants near you</p>
+            </div>
+
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="fast-food">Fast Food</button>
+                <button class="filter-tab" data-filter="fine-dining">Fine Dining</button>
+                <button class="filter-tab" data-filter="asian">Asian</button>
+                <button class="filter-tab" data-filter="italian">Italian</button>
+                <button class="filter-tab" data-filter="mexican">Mexican</button>
+            </div>
+
+            <div class="restaurant-grid">
+                <!-- Restaurant 1 -->
+                <div class="restaurant-card" data-category="fast-food">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=600&h=400&fit=crop" alt="The Burger House">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.8
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>The Burger House</h3>
+                        <p class="restaurant-cuisine">Burgers • American</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 25-35 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $10 min</span>
+                            <span class="free-delivery">Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 2 -->
+                <div class="restaurant-card" data-category="italian">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1578474846511-04ba529f0b88?w=600&h=400&fit=crop" alt="Mama Mia Pizzeria">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.9
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Mama Mia Pizzeria</h3>
+                        <p class="restaurant-cuisine">Pizza • Italian</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 30-40 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $15 min</span>
+                            <span class="free-delivery">Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 3 -->
+                <div class="restaurant-card" data-category="asian">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=600&h=400&fit=crop" alt="Tokyo Sushi Bar">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.7
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Tokyo Sushi Bar</h3>
+                        <p class="restaurant-cuisine">Sushi • Japanese</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 35-45 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $20 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 4 -->
+                <div class="restaurant-card" data-category="mexican">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=600&h=400&fit=crop" alt="El Taco Loco">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.6
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>El Taco Loco</h3>
+                        <p class="restaurant-cuisine">Mexican • Tacos</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 20-30 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $12 min</span>
+                            <span class="free-delivery">Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 5 -->
+                <div class="restaurant-card" data-category="fine-dining">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=600&h=400&fit=crop" alt="Le Gourmet">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.9
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Le Gourmet</h3>
+                        <p class="restaurant-cuisine">French • Fine Dining</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 45-60 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $35 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 6 -->
+                <div class="restaurant-card" data-category="asian">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Spice Kingdom">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.8
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Spice Kingdom</h3>
+                        <p class="restaurant-cuisine">Indian • Curry</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 30-40 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $18 min</span>
+                            <span class="free-delivery">Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 7 -->
+                <div class="restaurant-card" data-category="asian">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=600&h=400&fit=crop" alt="Thai Orchid">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.7
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Thai Orchid</h3>
+                        <p class="restaurant-cuisine">Thai • Asian Fusion</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 25-35 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $16 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 8 -->
+                <div class="restaurant-card" data-category="italian">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600&h=400&fit=crop" alt="Pasta Paradise">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.8
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Pasta Paradise</h3>
+                        <p class="restaurant-cuisine">Italian • Pasta</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 30-40 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $14 min</span>
+                            <span class="free-delivery">Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 9 -->
+                <div class="restaurant-card" data-category="fast-food">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1742936401708-dd1b132f06db?q=80&w=1626&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Fried Chicken Factory">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.5
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Fried Chicken Factory</h3>
+                        <p class="restaurant-cuisine">Chicken • Fast Food</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 20-30 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $10 min</span>
+                            <span class="free-delivery">Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 10 -->
+                <div class="restaurant-card" data-category="fine-dining">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&h=400&fit=crop" alt="Ocean's Catch">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.9
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Ocean's Catch</h3>
+                        <p class="restaurant-cuisine">Seafood • Fine Dining</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 40-50 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $30 min</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 11 -->
+                <div class="restaurant-card" data-category="asian">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1582878826629-29b7ad1cdc43?w=600&h=400&fit=crop" alt="Dragon Wok">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.6
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Dragon Wok</h3>
+                        <p class="restaurant-cuisine">Chinese • Asian</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 25-35 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $15 min</span>
+                            <span class="free-delivery">Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Restaurant 12 -->
+                <div class="restaurant-card" data-category="mexican">
+                    <div class="restaurant-image">
+                        <img src="https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?w=600&h=400&fit=crop" alt="Mediterranean Delights">
+                        <div class="restaurant-badge">
+                            <i class="fas fa-star"></i> 4.8
+                        </div>
+                    </div>
+                    <div class="restaurant-info">
+                        <h3>Mediterranean Delights</h3>
+                        <p class="restaurant-cuisine">Mediterranean • Greek</p>
+                        <div class="restaurant-meta">
+                            <span><i class="fas fa-clock"></i> 30-40 min</span>
+                            <span><i class="fas fa-dollar-sign"></i> $17 min</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Get your favorite food in 3 easy steps</p>
+            </div>
+
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?w=500&h=400&fit=crop" alt="Choose Restaurant">
+                        <div class="step-number">1</div>
+                    </div>
+                    <h3>Choose Your Restaurant</h3>
+                    <p>Browse hundreds of restaurants and select your favorite dishes from their menus</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=400&fit=crop" alt="Place Order">
+                        <div class="step-number">2</div>
+                    </div>
+                    <h3>Place Your Order</h3>
+                    <p>Add items to cart, customize your order, and proceed to secure checkout</p>
+                </div>
+
+                <div class="step-card">
+                    <div class="step-image">
+                        <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?w=500&h=400&fit=crop" alt="Fast Delivery">
+                        <div class="step-number">3</div>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Track your order in real-time and enjoy hot, fresh food at your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <p>Real reviews from real food lovers</p>
+            </div>
+
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop" alt="Sarah Johnson" class="reviewer-photo">
+                        <div class="reviewer-info">
+                            <h4>Sarah Johnson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"FoodExpress has become my go-to for ordering lunch at work. The delivery is always fast and the food arrives hot and fresh!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop" alt="Michael Chen" class="reviewer-photo">
+                        <div class="reviewer-info">
+                            <h4>Michael Chen</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Amazing variety of restaurants! I love that I can order from my favorite sushi place, pizza joint, or Indian restaurant all in one app."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop" alt="Emily Rodriguez" class="reviewer-photo">
+                        <div class="reviewer-info">
+                            <h4>Emily Rodriguez</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"The real-time tracking feature is fantastic! I always know exactly when my food will arrive. Customer service is top-notch too."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop" alt="David Thompson" class="reviewer-photo">
+                        <div class="reviewer-info">
+                            <h4>David Thompson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Great deals and discounts! I've saved so much money using promo codes. The app interface is super easy to use too."</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=200&h=200&fit=crop" alt="Lisa Anderson" class="reviewer-photo">
+                        <div class="reviewer-info">
+                            <h4>Lisa Anderson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"As a busy mom, FoodExpress is a lifesaver! I can order dinner for the whole family in minutes. Kids love the variety!"</p>
+                </div>
+
+                <div class="review-card">
+                    <div class="review-header">
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=200&h=200&fit=crop" alt="James Wilson" class="reviewer-photo">
+                        <div class="reviewer-info">
+                            <h4>James Wilson</h4>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Quality food delivered quickly! I've tried at least 20 different restaurants and haven't been disappointed yet. Highly recommend!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section class="app-download">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-image">
+                    <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=800&fit=crop" alt="Mobile App">
+                </div>
+                <div class="app-text">
+                    <h2>Download Our App</h2>
+                    <p>Get the best food delivery experience with our mobile app. Available on iOS and Android.</p>
+                    <ul class="app-features">
+                        <li><i class="fas fa-check"></i> Exclusive app-only deals</li>
+                        <li><i class="fas fa-check"></i> Faster checkout process</li>
+                        <li><i class="fas fa-check"></i> Real-time order tracking</li>
+                        <li><i class="fas fa-check"></i> Push notifications for updates</li>
+                    </ul>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                        <a href="#" class="app-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>FoodExpress</span>
+                    </div>
+                    <p>Delicious food delivered fast to your door. Order from your favorite restaurants today!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>For Restaurants</h4>
+                    <ul>
+                        <li><a href="#">Partner with Us</a></li>
+                        <li><a href="#">Restaurant Dashboard</a></li>
+                        <li><a href="#">Marketing Tools</a></li>
+                        <li><a href="#">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FoodExpress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span class="total-price" id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="window.location.href='checkout.html'">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

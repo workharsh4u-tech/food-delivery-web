@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mama Mia Pizzeria - Menu | FoodExpress</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <i class="fas fa-utensils"></i>
+                    <span>FoodExpress</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#restaurants">Restaurants</a></li>
+                    <li><a href="index.html#categories">Categories</a></li>
+                    <li><a href="index.html#how-it-works">How it Works</a></li>
+                    <li><a href="index.html#reviews">Reviews</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <button class="btn-icon" id="cartBtn">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count" id="cartCount">0</span>
+                    </button>
+                    <button class="btn btn-primary">Sign In</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Restaurant Header -->
+    <section class="restaurant-header">
+        <div class="restaurant-banner">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=1600&h=500&fit=crop" alt="Mama Mia Pizzeria">
+            <div class="banner-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="restaurant-header-content">
+                <div class="restaurant-header-info">
+                    <h1>Mama Mia Pizzeria</h1>
+                    <p class="restaurant-cuisine">
+                        <i class="fas fa-pizza-slice"></i> Pizza • Italian • Pasta
+                    </p>
+                    <div class="restaurant-details">
+                        <div class="detail-item">
+                            <i class="fas fa-star"></i>
+                            <span>4.9 (500+ ratings)</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>30-40 min</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <span>$15 min order</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-motorcycle"></i>
+                            <span>Free Delivery</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Special Offers -->
+    <section class="special-offers">
+        <div class="container">
+            <h2>Special Offers</h2>
+            <div class="offers-slider">
+                <div class="offer-card">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Pizza Deal">
+                    <div class="offer-content">
+                        <h3>Buy 1 Get 1 Free</h3>
+                        <p>On all large pizzas</p>
+                        <span class="offer-code">Use: PIZZA50</span>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=200&fit=crop" alt="Pasta Special">
+                    <div class="offer-content">
+                        <h3>20% OFF</h3>
+                        <p>On pasta dishes</p>
+                        <span class="offer-code">Use: PASTA20</span>
+                    </div>
+                </div>
+                <div class="offer-card">
+                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=200&fit=crop" alt="Family Deal">
+                    <div class="offer-content">
+                        <h3>Family Meal Deal</h3>
+                        <p>2 pizzas + sides + drinks</p>
+                        <span class="offer-price">$39.99</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu-section">
+        <div class="container">
+            <div class="menu-layout">
+                <!-- Menu Categories Sidebar -->
+                <div class="menu-categories">
+                    <h3>Menu Categories</h3>
+                    <ul class="category-list">
+                        <li><a href="#appetizers" class="category-link active">Appetizers</a></li>
+                        <li><a href="#pizzas" class="category-link">Pizzas</a></li>
+                        <li><a href="#pasta" class="category-link">Pasta</a></li>
+                        <li><a href="#calzones" class="category-link">Calzones & Stromboli</a></li>
+                        <li><a href="#salads" class="category-link">Salads</a></li>
+                        <li><a href="#desserts" class="category-link">Desserts</a></li>
+                        <li><a href="#drinks" class="category-link">Drinks</a></li>
+                    </ul>
+                </div>
+
+                <!-- Menu Items -->
+                <div class="menu-content">
+                    <!-- Appetizers -->
+                    <div class="menu-category" id="appetizers">
+                        <h2>
+                            <i class="fas fa-utensils"></i>
+                            Appetizers
+                        </h2>
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1534939561126-855b8675edd7?w=400&h=300&fit=crop" alt="Garlic Bread">
+                                    <button class="add-to-cart-btn" data-item="Garlic Bread" data-price="5.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Garlic Bread</h3>
+                                    <p>Fresh baked bread with garlic butter and herbs</p>
+                                    <div class="item-footer">
+                                        <span class="price">$5.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1625943553852-781c6dd46faa?w=400&h=300&fit=crop" alt="Mozzarella Sticks">
+                                    <button class="add-to-cart-btn" data-item="Mozzarella Sticks" data-price="7.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Mozzarella Sticks</h3>
+                                    <p>Crispy fried mozzarella with marinara sauce</p>
+                                    <div class="item-footer">
+                                        <span class="price">$7.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1630230596637-28f416b537ff?q=80&w=2055&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bruschetta">
+                                    <button class="add-to-cart-btn" data-item="Bruschetta" data-price="6.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Bruschetta</h3>
+                                    <p>Toasted bread with tomatoes, basil, and olive oil</p>
+                                    <div class="item-footer">
+                                        <span class="price">$6.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=400&h=300&fit=crop" alt="Chicken Wings">
+                                    <button class="add-to-cart-btn" data-item="Chicken Wings" data-price="9.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Chicken Wings</h3>
+                                    <p>8 pieces with choice of BBQ or buffalo sauce</p>
+                                    <div class="item-footer">
+                                        <span class="price">$9.99</span>
+                                        <span class="tag">Spicy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pizzas -->
+                    <div class="menu-category" id="pizzas">
+                        <h2>
+                            <i class="fas fa-pizza-slice"></i>
+                            Pizzas
+                        </h2>
+                        <div class="menu-grid">
+                            <div class="menu-item featured">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?w=400&h=300&fit=crop" alt="Margherita Pizza">
+                                    <span class="chef-special">Chef's Special</span>
+                                    <button class="add-to-cart-btn" data-item="Margherita Pizza" data-price="14.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Margherita Pizza</h3>
+                                    <p>Fresh mozzarella, tomatoes, basil, and olive oil</p>
+                                    <div class="item-footer">
+                                        <span class="price">$14.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="Pepperoni Pizza">
+                                    <button class="add-to-cart-btn" data-item="Pepperoni Pizza" data-price="16.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Pepperoni Pizza</h3>
+                                    <p>Classic pepperoni with mozzarella cheese</p>
+                                    <div class="item-footer">
+                                        <span class="price">$16.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1593560708920-61dd98c46a4e?w=400&h=300&fit=crop" alt="Hawaiian Pizza">
+                                    <button class="add-to-cart-btn" data-item="Hawaiian Pizza" data-price="15.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Hawaiian Pizza</h3>
+                                    <p>Ham, pineapple, mozzarella cheese</p>
+                                    <div class="item-footer">
+                                        <span class="price">$15.99</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop" alt="BBQ Chicken Pizza">
+                                    <button class="add-to-cart-btn" data-item="BBQ Chicken Pizza" data-price="17.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>BBQ Chicken Pizza</h3>
+                                    <p>Grilled chicken, BBQ sauce, red onions, cilantro</p>
+                                    <div class="item-footer">
+                                        <span class="price">$17.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Meat Lovers Pizza">
+                                    <button class="add-to-cart-btn" data-item="Meat Lovers Pizza" data-price="18.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Meat Lovers Pizza</h3>
+                                    <p>Pepperoni, sausage, bacon, ham, ground beef</p>
+                                    <div class="item-footer">
+                                        <span class="price">$18.99</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1571997478779-2adcbbe9ab2f?w=400&h=300&fit=crop" alt="Veggie Delight Pizza">
+                                    <button class="add-to-cart-btn" data-item="Veggie Delight Pizza" data-price="15.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Veggie Delight Pizza</h3>
+                                    <p>Mushrooms, peppers, onions, olives, tomatoes</p>
+                                    <div class="item-footer">
+                                        <span class="price">$15.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item featured">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1604917877934-07d8d248d396?q=80&w=987&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="White Pizza">
+                                    <span class="chef-special">Chef's Special</span>
+                                    <button class="add-to-cart-btn" data-item="White Pizza" data-price="16.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>White Pizza</h3>
+                                    <p>Ricotta, mozzarella, parmesan, garlic, herbs</p>
+                                    <div class="item-footer">
+                                        <span class="price">$16.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1739643815373-72444e14c54b?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Buffalo Chicken Pizza">
+                                    <button class="add-to-cart-btn" data-item="Buffalo Chicken Pizza" data-price="17.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Buffalo Chicken Pizza</h3>
+                                    <p>Spicy buffalo chicken, blue cheese, ranch</p>
+                                    <div class="item-footer">
+                                        <span class="price">$17.99</span>
+                                        <span class="tag">Spicy</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pasta -->
+                    <div class="menu-category" id="pasta">
+                        <h2>
+                            <i class="fas fa-bowl-food"></i>
+                            Pasta
+                        </h2>
+                        <div class="menu-grid">
+                            <div class="menu-item featured">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop" alt="Spaghetti Carbonara">
+                                    <span class="chef-special">Chef's Special</span>
+                                    <button class="add-to-cart-btn" data-item="Spaghetti Carbonara" data-price="13.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Spaghetti Carbonara</h3>
+                                    <p>Creamy sauce with bacon, eggs, and parmesan</p>
+                                    <div class="item-footer">
+                                        <span class="price">$13.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1622973536968-3ead9e780960?w=400&h=300&fit=crop" alt="Fettuccine Alfredo">
+                                    <button class="add-to-cart-btn" data-item="Fettuccine Alfredo" data-price="12.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Fettuccine Alfredo</h3>
+                                    <p>Rich creamy parmesan sauce</p>
+                                    <div class="item-footer">
+                                        <span class="price">$12.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1662197480393-2a82030b7b83?q=80&w=988&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Penne Arrabiata">
+                                    <button class="add-to-cart-btn" data-item="Penne Arrabiata" data-price="11.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Penne Arrabiata</h3>
+                                    <p>Spicy tomato sauce with garlic and red pepper</p>
+                                    <div class="item-footer">
+                                        <span class="price">$11.99</span>
+                                        <span class="tag">Spicy</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1626844131082-256783844137?w=400&h=300&fit=crop" alt="Lasagna">
+                                    <button class="add-to-cart-btn" data-item="Lasagna" data-price="14.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Lasagna</h3>
+                                    <p>Layers of pasta, meat sauce, and cheese</p>
+                                    <div class="item-footer">
+                                        <span class="price">$14.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1606850780554-b55ea4dd0b70?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Seafood Linguine">
+                                    <button class="add-to-cart-btn" data-item="Seafood Linguine" data-price="16.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Seafood Linguine</h3>
+                                    <p>Shrimp, mussels, and clams in white wine sauce</p>
+                                    <div class="item-footer">
+                                        <span class="price">$16.99</span>
+                                        <span class="tag">Seafood</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Calzones & Stromboli -->
+                    <div class="menu-category" id="calzones">
+                        <h2>
+                            <i class="fas fa-bread-slice"></i>
+                            Calzones & Stromboli
+                        </h2>
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?w=400&h=300&fit=crop" alt="Cheese Calzone">
+                                    <button class="add-to-cart-btn" data-item="Cheese Calzone" data-price="11.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Cheese Calzone</h3>
+                                    <p>Ricotta and mozzarella cheese with marinara</p>
+                                    <div class="item-footer">
+                                        <span class="price">$11.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1619895092538-128341789043?w=400&h=300&fit=crop" alt="Meat Stromboli">
+                                    <button class="add-to-cart-btn" data-item="Meat Stromboli" data-price="13.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Meat Stromboli</h3>
+                                    <p>Pepperoni, sausage, ham, and mozzarella</p>
+                                    <div class="item-footer">
+                                        <span class="price">$13.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1631531910306-83a83e073248?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Veggie Calzone">
+                                    <button class="add-to-cart-btn" data-item="Veggie Calzone" data-price="12.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Veggie Calzone</h3>
+                                    <p>Spinach, mushrooms, peppers, and cheese</p>
+                                    <div class="item-footer">
+                                        <span class="price">$12.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Salads -->
+                    <div class="menu-category" id="salads">
+                        <h2>
+                            <i class="fas fa-leaf"></i>
+                            Salads
+                        </h2>
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1546793665-c74683f339c1?w=400&h=300&fit=crop" alt="Caesar Salad">
+                                    <button class="add-to-cart-btn" data-item="Caesar Salad" data-price="8.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Caesar Salad</h3>
+                                    <p>Romaine lettuce, parmesan, croutons, Caesar dressing</p>
+                                    <div class="item-footer">
+                                        <span class="price">$8.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?w=400&h=300&fit=crop" alt="Caprese Salad">
+                                    <button class="add-to-cart-btn" data-item="Caprese Salad" data-price="9.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Caprese Salad</h3>
+                                    <p>Fresh mozzarella, tomatoes, basil, balsamic glaze</p>
+                                    <div class="item-footer">
+                                        <span class="price">$9.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=400&h=300&fit=crop" alt="Garden Salad">
+                                    <button class="add-to-cart-btn" data-item="Garden Salad" data-price="7.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Garden Salad</h3>
+                                    <p>Mixed greens, vegetables, choice of dressing</p>
+                                    <div class="item-footer">
+                                        <span class="price">$7.99</span>
+                                        <span class="tag vegetarian">Vegetarian</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Desserts -->
+                    <div class="menu-category" id="desserts">
+                        <h2>
+                            <i class="fas fa-ice-cream"></i>
+                            Desserts
+                        </h2>
+                        <div class="menu-grid">
+                            <div class="menu-item featured">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=400&h=300&fit=crop" alt="Tiramisu">
+                                    <span class="chef-special">Chef's Special</span>
+                                    <button class="add-to-cart-btn" data-item="Tiramisu" data-price="6.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Tiramisu</h3>
+                                    <p>Classic Italian dessert with coffee and mascarpone</p>
+                                    <div class="item-footer">
+                                        <span class="price">$6.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1578775887804-699de7086ff9?w=400&h=300&fit=crop" alt="Cannoli">
+                                    <button class="add-to-cart-btn" data-item="Cannoli" data-price="5.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Cannoli</h3>
+                                    <p>Crispy pastry shell with sweet ricotta filling</p>
+                                    <div class="item-footer">
+                                        <span class="price">$5.99</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=400&h=300&fit=crop" alt="Chocolate Lava Cake">
+                                    <button class="add-to-cart-btn" data-item="Chocolate Lava Cake" data-price="7.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Chocolate Lava Cake</h3>
+                                    <p>Warm chocolate cake with molten center</p>
+                                    <div class="item-footer">
+                                        <span class="price">$7.99</span>
+                                        <span class="tag">Popular</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1602532769069-0e856a643e7d?q=80&w=1480&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Gelato">
+                                    <button class="add-to-cart-btn" data-item="Gelato" data-price="4.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Gelato</h3>
+                                    <p>Italian ice cream - choice of flavors</p>
+                                    <div class="item-footer">
+                                        <span class="price">$4.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Drinks -->
+                    <div class="menu-category" id="drinks">
+                        <h2>
+                            <i class="fas fa-glass-water"></i>
+                            Drinks
+                        </h2>
+                        <div class="menu-grid">
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1629203851122-3726ecdf080e?w=400&h=300&fit=crop" alt="Soft Drinks">
+                                    <button class="add-to-cart-btn" data-item="Soft Drinks" data-price="2.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Soft Drinks</h3>
+                                    <p>Coca-Cola, Sprite, Fanta - 20oz</p>
+                                    <div class="item-footer">
+                                        <span class="price">$2.99</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=400&h=300&fit=crop" alt="Iced Tea">
+                                    <button class="add-to-cart-btn" data-item="Iced Tea" data-price="2.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Iced Tea</h3>
+                                    <p>Freshly brewed iced tea</p>
+                                    <div class="item-footer">
+                                        <span class="price">$2.99</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="menu-item">
+                                <div class="item-image">
+                                    <img src="https://images.unsplash.com/photo-1534353436294-0dbd4bdac845?w=400&h=300&fit=crop" alt="Sparkling Water">
+                                    <button class="add-to-cart-btn" data-item="Sparkling Water" data-price="3.99">
+                                        <i class="fas fa-plus"></i>
+                                    </button>
+                                </div>
+                                <div class="item-info">
+                                    <h3>Sparkling Water</h3>
+                                    <p>San Pellegrino or Perrier</p>
+                                    <div class="item-footer">
+                                        <span class="price">$3.99</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-utensils"></i>
+                        <span>FoodExpress</span>
+                    </div>
+                    <p>Delicious food delivered fast to your door.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FoodExpress. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Your Cart</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart">
+                <i class="fas fa-shopping-cart"></i>
+                <p>Your cart is empty</p>
+            </div>
+        </div>
+        <div class="cart-footer" id="cartFooter" style="display: none;">
+            <div class="cart-total">
+                <span>Subtotal:</span>
+                <span class="total-price" id="cartTotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary btn-block" onclick="window.location.href='checkout.html'">
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/restaurant.js"></script>
+</body>
+</html>
